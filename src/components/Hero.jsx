@@ -208,8 +208,7 @@ export default function Hero() {
                 </AnimatePresence>
             </div>
 
-            {/* Decorative Blob */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-[100px] -z-10 mix-blend-screen animate-pulse pointer-events-none"></div>
+
         </section>
     );
 }

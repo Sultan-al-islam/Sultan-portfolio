@@ -6,11 +6,42 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Competitive from './components/Competitive';
 import Contact from './components/Contact';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
     <div className="relative w-full h-full min-h-screen">
       <div className="animated-bg-glow"></div>
+      {/* Smooth Animated Background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <motion.div
+          animate={{
+            x: [0, 100, -50, 0],
+            y: [0, -50, 100, 0],
+            scale: [1, 1.2, 0.8, 1],
+          }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+          className="absolute top-[-10%] left-[-10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-blue-500/10 rounded-full blur-[100px] md:blur-[120px] mix-blend-screen"
+        />
+        <motion.div
+          animate={{
+            x: [0, -100, 50, 0],
+            y: [0, 100, -50, 0],
+            scale: [1, 1.1, 0.9, 1],
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+          className="absolute bottom-[-10%] right-[-10%] w-[500px] md:w-[700px] h-[500px] md:h-[700px] bg-purple-500/10 rounded-full blur-[100px] md:blur-[120px] mix-blend-screen"
+        />
+        <motion.div
+          animate={{
+            x: [0, 50, -100, 0],
+            y: [0, -100, 50, 0],
+            scale: [1, 1.3, 0.9, 1],
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-[30%] left-[30%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-500/10 rounded-full blur-[80px] md:blur-[120px] mix-blend-screen"
+        />
+      </div>
 
       <Navbar />
 
