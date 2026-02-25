@@ -46,7 +46,7 @@ export default function Academic() {
                                             </div>
                                             <div>
                                                 <span className="block text-sm text-gray-500 uppercase tracking-wider">CGPA</span>
-                                                <strong className="text-xl text-white">4.87</strong>
+                                                <strong className="text-xl text-white">3.87</strong>
                                                 <span className="text-sm ml-2">(4th Year 2nd Semester)</span>
                                             </div>
                                         </div>
