@@ -14,7 +14,7 @@ export default function Hero() {
         {
             id: 0,
             icon: <BsCodeSlash size={20} />,
-            count: "1000+",
+            count: "500+",
             label: "Problems Solved",
             iconBg: "from-blue-500/20 to-cyan-500/20",
             iconColor: "text-blue-400",
@@ -23,7 +23,7 @@ export default function Hero() {
         {
             id: 1,
             icon: <BsCpu size={20} />,
-            count: "20+",
+            count: "10+",
             label: "Web & ML Projects",
             iconBg: "from-purple-500/20 to-pink-500/20",
             iconColor: "text-purple-400",
