@@ -21,6 +21,18 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Prevent scrolling when mobile menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
     const scrollTo = (e, href) => {
         e.preventDefault();
         setIsOpen(false);
@@ -39,7 +51,7 @@ export default function Navbar() {
                 }`}
         >
             <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
-                <a href="#home" onClick={(e) => scrollTo(e, '#home')} className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 z-50">
+                <a href="#home" onClick={(e) => scrollTo(e, '#home')} className="relative text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 z-50">
                     Sultan
                 </a>
 
@@ -60,7 +72,7 @@ export default function Navbar() {
                 </ul>
 
                 {/* Mobile Hamburger Toggle */}
-                <div className="md:hidden z-50 flex items-center">
+                <div className="md:hidden relative z-50 flex items-center">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
                         className="text-gray-300 focus:outline-none focus:text-white"
@@ -74,13 +86,25 @@ export default function Navbar() {
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
+                        key="overlay"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        onClick={() => setIsOpen(false)}
+                        className="fixed top-0 left-0 w-full h-screen bg-black/60 backdrop-blur-sm z-30 md:hidden"
+                    />
+                )}
+                {isOpen && (
+                    <motion.div
+                        key="sidebar"
                         initial={{ x: '100%' }}
                         animate={{ x: 0 }}
                         exit={{ x: '100%' }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="fixed top-0 right-0 h-screen w-3/4 sm:w-1/2 bg-white/5 backdrop-blur-2xl md:hidden z-40 border-l border-white/10 shadow-2xl flex flex-col justify-center items-center"
+                        className="fixed top-0 right-0 h-screen w-3/4 sm:w-1/2 bg-black/40 backdrop-blur-2xl md:hidden z-40 border-l border-white/10 shadow-2xl flex flex-col justify-center items-center"
                     >
-                        <ul className="flex flex-col gap-8 text-xl text-gray-300 font-medium">
+                        <ul className="flex flex-col gap-8 text-xl text-gray-300 font-medium z-50">
                             {navItems.map((item) => (
                                 <li key={item.name} className="flex justify-center">
                                     <a

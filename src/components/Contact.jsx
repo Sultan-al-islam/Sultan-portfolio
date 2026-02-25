@@ -40,7 +40,7 @@ export default function Contact() {
                             </a>
                         </div>
 
-                        <div className="flex gap-4 w-full">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full">
                             <a
                                 href="https://www.linkedin.com/in/sultan-al-islam/"
                                 target="_blank"
