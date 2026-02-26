@@ -32,11 +32,11 @@ export default function Contact() {
                             </a>
 
                             <a
-                                href="tel:+1234567890"
+                                href="tel:+8801621987183"
                                 className="flex-1 flex items-center justify-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 py-4 px-6 rounded-2xl transition-all group"
                             >
                                 <FiPhone className="text-emerald-400 group-hover:scale-110 transition-transform" size={24} />
-                                <span className="text-white font-medium">+880162-1987183</span>
+                                <span className="text-white font-medium">+8801621987183</span>
                             </a>
                         </div>
 
