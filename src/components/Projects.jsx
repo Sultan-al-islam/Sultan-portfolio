@@ -31,6 +31,50 @@ const mlProjectsData = [
 
 const webProjectsData = [
     {
+    title: "Mu ThesisArc - University Thesis Archive Platform",
+    description: "Mu ThesisArc is a modern full-stack thesis archive platform designed for university students and researchers. Built with the MERN stack, it allows users to upload, discover, and manage academic research efficiently. The platform features secure JWT authentication, advanced thesis search and filtering, profile management, and seamless integration with Google Drive and Google Colab. With a responsive interface, elegant UI, and cloud-based media handling, Mu ThesisArc provides a professional solution for academic resource sharing and collaboration.",
+    techStack: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Axios",
+        "React Router",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "bcryptjs",
+        "Cloudinary",
+        "Multer"
+    ],
+    githubLink: "https://github.com/Sultan-al-islam/MuthesisArc",
+    liveLink: "https://muthesisarc-1.onrender.com/"
+},
+
+{
+    title: "Job Portal - Full Stack Recruitment Platform",
+    description: "A modern MERN-stack job portal designed to connect job seekers and recruiters through a seamless hiring experience. The platform features secure role-based authentication, advanced job search and filtering, resume uploads via Cloudinary, one-click job applications, real-time application tracking, company profile management, and a powerful recruiter dashboard for posting jobs and managing applicants efficiently.",
+    techStack: [
+        "React",
+        "Vite",
+        "Redux Toolkit",
+        "Redux Persist",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "Cloudinary",
+        "Multer"
+    ],
+    githubLink: "https://github.com/Sultan-al-islam/JobPortal",
+    liveLink: "https://jobportal-zw1z.onrender.com"
+},
+    {
         title: "STalk - Real Time Chat Application",
         description: "A modern, full-stack chat platform that enables seamless real-time communication. Built with React, Node.js, Express, and MongoDB, STalk supports user authentication, multimedia sharing, and persistent chat history. Users can interact with friends, share files, view online statuses, and experience live typing indicators. The application leverages Socket.io for real-time messaging and Cloudinary for media uploads, providing a responsive, mobile-friendly interface powered by Tailwind CSS.",
         techStack: ["React", "Tailwind CSS", "Vite", "Axios", "Zustand/Redux", "React Router","Node.js", "Express", "MongoDB", "Mongoose", "Socket.io", "JWT", "Cloudinary"],
